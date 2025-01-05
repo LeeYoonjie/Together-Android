@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 배경색 -->
+    <solid android:color="@color/black" /> <!-- 보낸 메시지의 말풍선 배경색 -->
+
+    <!-- 둥근 모서리 -->
+    <corners android:radius="16dp" />
+
+    <!-- 패딩 (내용과 가장자리 간의 거리) -->
+    <padding
+        android:left="12dp"
+        android:top="8dp"
+        android:right="12dp"
+        android:bottom="8dp" />
+</shape>

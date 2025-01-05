@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TogetherApp</string>
+    <string name="label_map_icon">지도</string>
+    <string name="label_home_icon">홈</string>
+    <string name="label_mypage_icon">마이페이지</string>
+    <string name="appbar_top">Together</string>
+    <string name="home_banner">내가 찾은 동승자❤️</string>
+    <string name="home_hot">🔥 HOT 게시물</string>
+    <string name="home_time">💬 실시간 게시물</string>
+    <string name="invalid_date">유효하지 않은 날짜</string>
+    <string name="no_date_available">날짜 정보 없음</string>
+    <string name="kakao_map_key">37eb95ced531c5e2316d8d6a84c810fc</string>
+</resources>

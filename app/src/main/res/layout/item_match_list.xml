@@ -1,0 +1,76 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="chatRoom"
+            type="com.together.togetherproject.data.model.ChatRoom" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imgProfileUser1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_user"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_background" />
+
+            <!-- 사용자 1 / & / 사용자 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/tvChatRoomUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:participantsFormatted="@{chatRoom.participants}"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="사용자 1 and 사용자 2" />
+
+                <TextView
+                    android:id="@+id/tvLastMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{chatRoom.lastMessage}"
+                    android:textSize="14sp"
+                    android:textColor="#888888"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="정보 입력하기" />
+            </LinearLayout>
+
+            <!-- 마지막 메시지 시간 -->
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:formattedTimestamp="@{chatRoom.timestamp}"
+                android:textSize="12sp"
+                android:textColor="#888888"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                tools:text="오전 11:30" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

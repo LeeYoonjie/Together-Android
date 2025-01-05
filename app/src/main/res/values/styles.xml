@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- BottomSheet 전체 높이 테마 -->
+    <style name="FullHeightBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/FullHeightBottomSheet</item>
+    </style>
+
+    <style name="FullHeightBottomSheet" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="Theme.TogetherProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    </style>
+    <style name="HintTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/pretendard_regular</item>
+    </style>
+</resources>

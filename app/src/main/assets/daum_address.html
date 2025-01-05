@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>주소 검색</title>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        function setAddress() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    try {
+                        window.Android.setAddress(data.zonecode, data.roadAddress);
+                        console.log("Address:", data.zonecode, data.roadAddress);
+                    } catch (error) {
+                        console.error("Error calling Android function:", error);
+                    }
+                }
+            }).open();
+        }
+    </script>ls
+</head>
+<body onload="setAddress()">
+</body>
+</html>
